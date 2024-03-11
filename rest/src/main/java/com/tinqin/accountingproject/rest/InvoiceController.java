@@ -1,6 +1,5 @@
 package com.tinqin.accountingproject.rest;
 
-import com.tinqin.accountingproject.api.invoice.update.InvoiceUpdateResponse;
 
 import com.tinqin.accountingproject.api.invoice.GetByCreationDateRange.GetByDateRangeRequest;
 import com.tinqin.accountingproject.api.invoice.GetByCreationDateRange.GetByDateRangeResponse;
@@ -15,6 +14,7 @@ import com.tinqin.accountingproject.api.invoice.getAllListPagination.GetAllInvoi
 import com.tinqin.accountingproject.api.invoice.getById.GetByInvoiceIdRequest;
 import com.tinqin.accountingproject.api.invoice.getById.GetByInvoiceIdResponse;
 import com.tinqin.accountingproject.api.invoice.update.InvoiceUpdateRequest;
+import com.tinqin.accountingproject.api.invoice.update.InvoiceUpdateResponse;
 import com.tinqin.accountingproject.rest.core.invoice.GetByPaymentDate.GetByPaymentDateOperationProcessor;
 import com.tinqin.accountingproject.rest.core.invoice.create.InvoiceCreateOperationProcessor;
 import com.tinqin.accountingproject.rest.core.invoice.delete.InvoiceDeleteOperationProcessor;
@@ -24,7 +24,7 @@ import com.tinqin.accountingproject.rest.core.invoice.getById.GetByInvoiceIdOper
 import com.tinqin.accountingproject.rest.core.invoice.update.InvoiceUpdateOperationProcessor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
+import com.tinqin.accountingproject.api.*;
 import java.util.List;
 
 @RestController
@@ -45,7 +45,7 @@ public class InvoiceController {
     InvoiceCreateResponse newInvoice (@RequestBody InvoiceCreateRequest invoiceCreateRequest){
         return invoiceCreateOperationProcessor.process(invoiceCreateRequest);
     }
-    @PostMapping("/getByInvoiceID/{invoiceId}")
+    @GetMapping("/getByInvoiceID/{invoiceId}")
     GetByInvoiceIdResponse getInvoiceById(@PathVariable String invoiceId){
         return  getByInvoiceIdOperationProcessor.process(GetByInvoiceIdRequest.builder()
                                                                             .invoiceNumber(invoiceId).build());

@@ -18,4 +18,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.tinqin.accountingproject</groupId>
+            <artifactId>api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
