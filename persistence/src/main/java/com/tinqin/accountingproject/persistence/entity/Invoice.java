@@ -19,7 +19,9 @@ public class Invoice {
     private UUID uuid;
     private String invoiceId;
     private UUID creatorProviderId;
+    private String creatorProviderIBAN;
     private UUID receiverProviderId;
+    private String receiverProviderIBAN;
     private double sum;
     private String currency;
     private Timestamp dateOfCreation;

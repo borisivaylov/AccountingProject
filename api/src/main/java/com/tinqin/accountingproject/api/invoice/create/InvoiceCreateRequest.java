@@ -18,8 +18,12 @@ public class InvoiceCreateRequest implements OperationInput {
     private String invoiceNumber;
     @JsonProperty("CreatorProviderId")
     private UUID creatorProviderId;
+    @JsonProperty("CreatorProviderIBAN")
+    private String CreatorProviderIBAN;
     @JsonProperty("ReceiverProviderId")
     private UUID ReceiverProviderId;
+    @JsonProperty("ReceiverProviderIBAN")
+    private String ReceiverProviderIBAN;
     @JsonProperty("Sum")
     private double sum;
     @JsonProperty("currency")

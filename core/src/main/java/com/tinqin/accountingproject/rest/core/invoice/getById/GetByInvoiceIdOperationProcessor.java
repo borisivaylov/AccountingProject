@@ -15,6 +15,7 @@ import java.util.NoSuchElementException;
 public class GetByInvoiceIdOperationProcessor implements GetByInvoiceIdOperation {
 
     private final InvoiceRepository invoiceRepository;
+
     @Override
     public GetByInvoiceIdResponse process(GetByInvoiceIdRequest operationInput) {
 
@@ -25,6 +26,8 @@ public class GetByInvoiceIdOperationProcessor implements GetByInvoiceIdOperation
         return GetByInvoiceIdResponse.builder()
                 .invoiceNumber(invoice.getInvoiceId())
                 .creatorProviderId(invoice.getCreatorProviderId())
+                .creatorProviderIBAN(invoice.getCreatorProviderIBAN())
+                .ReceiverProviderIBAN(invoice.getReceiverProviderIBAN())
                 .ReceiverProviderId(invoice.getReceiverProviderId())
                 .sum(invoice.getSum())
                 .currency(invoice.getCurrency())

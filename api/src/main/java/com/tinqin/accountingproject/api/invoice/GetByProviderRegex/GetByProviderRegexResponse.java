@@ -20,6 +20,8 @@ public class GetByProviderRegexResponse  implements OperationResult {
     private UUID creatorProviderId;
     @JsonProperty("ReceiverProviderId")
     private UUID ReceiverProviderId;
+    @JsonProperty("ReceiverProviderId")
+    private String ReceiverProviderIBAN;
     @JsonProperty("Sum")
     private double sum;
     @JsonProperty("currency")

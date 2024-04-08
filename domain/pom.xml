@@ -9,33 +9,24 @@
         <version>${revision}</version>
     </parent>
 
-    <groupId>com.tinqin.accountingproject</groupId>
-    <artifactId>core</artifactId>
+    <groupId>com.tinqin.accountingproject.domain</groupId>
+    <artifactId>domain</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+
     <dependencies>
-        <dependency>
-            <groupId>com.tinqin.accountingproject</groupId>
-            <artifactId>api</artifactId>
-            <version>${revision}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.tinqin.accountingproject</groupId>
-            <artifactId>persistence</artifactId>
-            <version>${revision}</version>
-            <scope>compile</scope>
-        </dependency>
 
-
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-jackson</artifactId>
+            <version>12.4</version>
+        </dependency>
 
     </dependencies>
-
-
-
 
 </project>

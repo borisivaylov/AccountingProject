@@ -20,6 +20,8 @@ public class GetByPaymentDateResponse implements OperationResult {
     private UUID creatorProviderId;
     @JsonProperty("ReceiverProviderId")
     private UUID ReceiverProviderId;
+    @JsonProperty("ReceiverProviderIBAN")
+    private String ReceiverProviderIBAN;
     @JsonProperty("DateOfCreation")
     private Timestamp dateOfCreation;
     @JsonProperty("Sum")

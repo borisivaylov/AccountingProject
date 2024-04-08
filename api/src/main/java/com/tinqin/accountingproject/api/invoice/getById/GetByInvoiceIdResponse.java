@@ -19,8 +19,12 @@ public class GetByInvoiceIdResponse implements OperationResult {
     private String invoiceNumber;
     @JsonProperty("CreatorProviderId")
     private UUID creatorProviderId;
+    @JsonProperty("creatorProviderIBAN")
+    private String creatorProviderIBAN;
     @JsonProperty("ReceiverProviderId")
     private UUID ReceiverProviderId;
+    @JsonProperty("ReceiverProviderIBAN")
+    private String ReceiverProviderIBAN;
     @JsonProperty("Sum")
     private double sum;
     @JsonProperty("currency")

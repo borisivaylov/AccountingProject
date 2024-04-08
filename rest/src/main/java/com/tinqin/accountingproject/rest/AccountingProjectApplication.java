@@ -7,10 +7,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@ComponentScan(basePackages = {"com.tinqin"})
+@ComponentScan(basePackages = {"com.tinqin.**"})
 @EntityScan(basePackages = {"com.tinqin.accountingproject.persistence.entity"})
 @EnableJpaRepositories(basePackages = {"com.tinqin.accountingproject.persistence.repository"})
-@EnableFeignClients(basePackages ={"com.tinqin.accountingproject"})
+@EnableFeignClients(basePackages ={"com.tinqin.**"})
 @SpringBootApplication
 
 public class AccountingProjectApplication {

@@ -36,6 +36,7 @@ public class GetByPaymentDateOperationProcessor implements GetByPaymentDateOpera
                     .invoiceNumber(invoice.getInvoiceId())
                     .creatorProviderId(invoice.getCreatorProviderId())
                     .ReceiverProviderId(invoice.getReceiverProviderId())
+                    .ReceiverProviderIBAN(invoice.getReceiverProviderIBAN())
                     .dateOfCreation(invoice.getDateOfCreation())
                     .sum(invoice.getSum())
                     .currency(invoice.getCurrency())
